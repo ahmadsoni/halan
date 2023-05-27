@@ -1,15 +1,16 @@
 import React from 'react';
-import {View, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity, ScrollView} from 'react-native';
 import {Icon, Text} from 'react-native-elements';
 import tw from 'twrnc';
 import Map from './../components/Map';
-import NavigateCard from './../components/NavigateCard';
+import NavigateCard from '../components/NavigateCard';
 import FuelOptionsCard from './../components/FuelOptionsCard';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useNavigation} from '@react-navigation/native';
 import EstimateCard from '../components/EstimateCard';
 import {useDispatch} from 'react-redux';
 import {setOrigin, setDestination} from '../../core/redux/slices/navSlices';
+import SelectCarAndFuel from '../components/SelectCarAndFuel';
 function MapScreen() {
   const Stack = createNativeStackNavigator();
   const navigation = useNavigation();
@@ -47,6 +48,13 @@ function MapScreen() {
           <Stack.Screen
             name="EstimateCard"
             component={EstimateCard}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="SelectCarAndFuel"
+            component={SelectCarAndFuel}
             options={{
               headerShown: false,
             }}

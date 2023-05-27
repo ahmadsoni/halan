@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "label": "TOYOTA AVANZA",
+    "fuelTypes": ["PERTALITE", "PERTAMAX"],
+    "fuelEfficiency": 15
+  },
+  {
+    "id": "2",
+    "label": "HONDA Brio Satya",
+    "fuelTypes": ["PERTALITE", "PERTAMAX"],
+    "fuelEfficiency": 17
+  },
+  {
+    "id": "3",
+    "label": "Pajero Sport",
+    "fuelTypes": ["DEXLITE", "solar", "bio solar"],
+    "fuelEfficiency": 10
+  },
+  {
+    "id": "4",
+    "label": "Kijang Innova",
+    "fuelTypes": ["PERTAMAX"],
+    "fuelEfficiency": 15
+  },
+  {
+    "id": "5",
+    "label": "Kijang Innova diesel",
+    "fuelTypes": ["DEXLITE"],
+    "fuelEfficiency": 13
+  },
+  {
+    "id": "6",
+    "label": "Ertiga",
+    "fuelTypes": ["PERTALITE", "PERTAMAX"],
+    "fuelEfficiency": 14.5
+  }
+]

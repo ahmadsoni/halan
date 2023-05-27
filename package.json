@@ -14,9 +14,12 @@
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "@reduxjs/toolkit": "^1.9.5",
+    "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-native": "0.71.7",
+    "react-native-dropdown-picker": "^5.4.6",
     "react-native-elements": "^3.4.3",
+    "react-native-flipper": "^0.191.0",
     "react-native-google-places-autocomplete": "^2.5.1",
     "react-native-maps": "^1.7.1",
     "react-native-maps-directions": "^1.9.0",
@@ -24,6 +27,7 @@
     "react-native-screens": "^3.20.0",
     "react-native-vector-icons": "^9.2.0",
     "react-redux": "^8.0.5",
+    "redux-flipper": "^2.0.2",
     "twrnc": "^3.6.0"
   },
   "devDependencies": {

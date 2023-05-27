@@ -1,4 +1,9 @@
-function calculateRoadPrice(hargaBensin: number, jarakTempuh: number): number {
+import fuelEfficiencyData from '../core/services/fuelEfficiencyData .json';
+function calculateRoadPrice(
+  hargaBensin: number,
+  jarakTempuh: number,
+  jenisMobil: string,
+): number {
   // convert to number harga besin
   hargaBensin = Number(hargaBensin);
   if (
@@ -9,9 +14,18 @@ function calculateRoadPrice(hargaBensin: number, jarakTempuh: number): number {
   ) {
     throw new Error('Harga bensin dan jarak tempuh harus lebih dari 0');
   }
+  const selectedVehicle = fuelEfficiencyData.find(
+    data => data.id === jenisMobil,
+  );
+  if (!selectedVehicle) {
+    throw new Error('Data kendaraan tidak ditemukan');
+  }
 
-  const konsumsiBensinPerKm = 0.1; // asumsi konsumsi bensin per kilometer adalah 0.1 liter
+  // menghitung konsumsi bensin per km
+  const konsumsiBensinPerKm = 1 / selectedVehicle.fuelEfficiency; // liter/km
   const totalBensin = jarakTempuh * konsumsiBensinPerKm;
+
+  // menghitung harga jalan
   const hargaJalan = totalBensin * hargaBensin;
 
   return hargaJalan;

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "label": "PERTALITE",
+    "price": 10000,
+    "image": "../../../assets/icon/icon-pertalite.png"
+  },
+  {
+    "id": "2",
+    "label": "PERTAMAX",
+    "price": 13300,
+    "image": "../../../assets/icon/icon-pertamax.png"
+  },
+  {
+    "id": "3",
+    "label": "DEXLITE",
+    "price": 14950,
+    "image": "../../../assets/icon/icon-dexLite.png"
+  }
+]

@@ -6,14 +6,8 @@ const data = [
   {
     id: '123',
     icon: 'home',
-    location: 'Home',
-    destination: 'Jalan Raya Cibaduyut, Bandung, Indonesia',
-  },
-  {
-    id: '456',
-    icon: 'briefcase',
-    location: 'Work',
-    destination: 'Jalan Raya Cibaduyut, Bandung, Indonesia',
+    location: 'Lokasi Anda',
+    destination: 'Lokasi anda saat ini',
   },
 ];
 

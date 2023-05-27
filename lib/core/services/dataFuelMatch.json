@@ -1,0 +1,39 @@
+[
+    {
+        "id": "1",
+        "data": {
+            "fuelTypes":   ["PERTALITE", "PERTAMAX"]
+        }
+    },
+    {
+        "id": "2",
+        "data": {
+            "fuelTypes": ["PERTALITE", "PERTAMAX"]
+        }
+    },
+    {
+        "id": "3",
+        "data": {
+            "fuelTypes": ["DEXLITE", "SOLAR", "bio solar"]
+        }
+    },
+    {
+        "id": "4",
+        "data": {
+            "fuelTypes": ["PERTAMAX"]
+        }
+    },
+    {
+        "id": "5",
+        "data": {
+           "fuelTypes": ["DEXLITE"]
+        }
+    },
+     {
+        "id": "5",
+        "data": {
+            "fuelTypes": ["PERTALITE", "PERTAMAX"]
+        }
+    }
+    
+]

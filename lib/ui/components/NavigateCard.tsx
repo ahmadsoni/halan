@@ -14,7 +14,6 @@ import {setDestination} from '../../core/redux/slices/navSlices';
 import {useNavigation} from '@react-navigation/native';
 import NavFavorites from './NavFavorites';
 import checkTimeOfDay from '../../utils/checkTimeOfDay';
-import {Icon} from 'react-native-elements';
 const NavigateCard = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
@@ -44,7 +43,7 @@ const NavigateCard = () => {
                   describe: data.description,
                 }),
               );
-              navigation.navigate('FuelOptionsCard' as never);
+              navigation.navigate('SelectCarAndFuel' as never);
             }}
             query={{
               key: GOOGLE_MAP_API_KEY,
