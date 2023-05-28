@@ -30,13 +30,12 @@ const Map = () => {
       edgePadding: {top: 50, right: 50, bottom: 50, left: 50},
     });
   }, [origin, destination, dispatch, isMapReady]);
-
   useEffect(() => {
     if (!origin || !destination) {
       return;
     }
     const getTravelTime = async () => {
-      const URL = `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.describe}&destinations=${destination.describe}&key=${GOOGLE_MAP_API_KEY}`;
+      const URL = `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.location.lat},${origin.location.lng}&destinations=${destination.location.lat},${destination.location.lng}&key=${GOOGLE_MAP_API_KEY}`;
       fetch(URL)
         .then(res => res.json())
         .then(data => {
@@ -59,8 +58,14 @@ const Map = () => {
       }}>
       {origin && destination && (
         <MapViewDirections
-          origin={origin.describe}
-          destination={destination.describe}
+          origin={{
+            latitude: origin.location.lat,
+            longitude: origin.location.lng,
+          }}
+          destination={{
+            latitude: destination.location.lat,
+            longitude: destination.location.lng,
+          }}
           apikey={GOOGLE_MAP_API_KEY}
           strokeWidth={3}
           strokeColor="black"

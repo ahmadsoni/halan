@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, ScrollView} from 'react-native';
+import {View, TouchableOpacity, StatusBar, StyleSheet} from 'react-native';
 import {Icon, Text} from 'react-native-elements';
 import tw from 'twrnc';
 import Map from './../components/Map';
@@ -11,6 +11,7 @@ import EstimateCard from '../components/EstimateCard';
 import {useDispatch} from 'react-redux';
 import {setOrigin, setDestination} from '../../core/redux/slices/navSlices';
 import SelectCarAndFuel from '../components/SelectCarAndFuel';
+import requestLocationPermission from '../../utils/requestPermision';
 function MapScreen() {
   const Stack = createNativeStackNavigator();
   const navigation = useNavigation();

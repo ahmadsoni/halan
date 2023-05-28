@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Provider} from 'react-redux';
 import {store} from './lib/core/redux/store';
 import HomeScreen from './lib/ui/screens/HomeScreen';
@@ -7,9 +7,12 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MapScreen from './lib/ui/screens/MapScreen';
 import {KeyboardAvoidingView, Platform} from 'react-native';
-
+import requestLocationPermission from './lib/utils/requestPermision';
 export default function App() {
   const Stack = createNativeStackNavigator();
+  // useEffect(() => {
+  //   requestLocationPermission();
+  // }, []);
   return (
     <Provider store={store}>
       <NavigationContainer>

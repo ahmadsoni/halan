@@ -20,7 +20,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import _dataFuel from '../../core/services/dataFuel.json';
 import _fuelEffeciencyData from '../../core/services/fuelEfficiencyData .json';
 import _dataFuelMatch from '../../core/services/dataFuelMatch.json';
-
+import {setDestination} from '../../core/redux/slices/navSlices';
 interface FuelType {
   id: string;
   data: {
